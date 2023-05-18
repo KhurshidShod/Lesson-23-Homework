@@ -1,6 +1,6 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
-@import "../global";
+@use "../global";
 
 .hero{
     background-color: var(--bgColor-blue);
