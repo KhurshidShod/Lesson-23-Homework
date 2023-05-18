@@ -48,7 +48,7 @@
       &::before{
         content: "";
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         width: 200%;
         height: 0%;
         border-radius: 60%;
@@ -64,6 +64,16 @@
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
+      }
+      &::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 0%;
+        bottom: 0;
+        left: 0;
+        background-color: var(--bgColor-blue);
       }
       .span {
         @include mix.df(start, center, row);
@@ -137,23 +147,52 @@
         }
       }
       &:hover {
-        background-color: var(--bgColor-blue);
         a {
           color: var(--bgColor-yellow);
-        }
+          transition-delay: .5s;
+          transition: .5s linear;
+          -webkit-transition: .5s linear;
+          -moz-transition: .5s linear;
+          -ms-transition: .5s linear;
+          -o-transition: .5s linear;
+}
         h6,
         p,
         li {
           color: #ffffff;
-        }
+          transition-delay: .5s;
+          transition: .5s linear;
+          -webkit-transition: .5s linear;
+          -moz-transition: .5s linear;
+          -ms-transition: .5s linear;
+          -o-transition: .5s linear;
+}
         span:first-child {
           color: #fff;
-        }
+          transition-delay: .5s;
+          transition: .5s linear;
+          -webkit-transition: .5s linear;
+          -moz-transition: .5s linear;
+          -ms-transition: .5s linear;
+          -o-transition: .5s linear;
+}
         button {
           background: #fcd980;
-          a {
-            color: var(--fontColor-blackh);
-          }
+          transition-delay: .5s;
+          transition: .5s linear;
+          -webkit-transition: .5s linear;
+          -moz-transition: .5s linear;
+          -ms-transition: .5s linear;
+          -o-transition: .5s linear;
+          a{
+          color: var(--fontColor-blackh);
+          transition-delay: .5s;
+          transition: .5s linear;
+          -webkit-transition: .5s linear;
+          -moz-transition: .5s linear;
+          -ms-transition: .5s linear;
+          -o-transition: .5s linear;
+        }
         }
       }
       &:hover::before{
@@ -163,8 +202,17 @@
         -moz-transition: .5s;
         -ms-transition: .5s;
         -o-transition: .5s;
+        transition-delay: .7s;
+      }
+      &:hover::after{
+        height: 100%;
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
         transition-delay: .2s;
-}
+      }
     }
   }
 
